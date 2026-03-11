@@ -55,7 +55,10 @@
     background:#1e3c52;
     color:white;
     }
-
+    .input-box input:focus{
+    outline:none;
+    box-shadow:0 0 5px #19c3d4;
+    }
     button{
     width:100%;
     padding:12px;
