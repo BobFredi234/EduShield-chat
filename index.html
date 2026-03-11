@@ -1,26 +1,209 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div>
-        <h1>Connexion</h1>
-        <form>
-            <div>
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Interface</title>
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    }
+
+    .container{
+    width:900px;
+    height:500px;
+    background:#142b3d;
+    border-radius:10px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .login-section{
+    width:50%;
+    padding:50px;
+    color:white;
+    }
+
+    .login-section h2{
+    margin-bottom:10px;
+    }
+
+    .login-section p{
+    color:#cfd8dc;
+    }
+
+    .input-box{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    }
+
+    .input-box label{
+    margin-bottom:5px;
+    font-size:14px;
+    }
+
+    .input-box input{
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#1e3c52;
+    color:white;
+    }
+
+    button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#19c3d4;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+    }
+
+    button:hover{
+    background:#0fa3b1;
+    }
+
+    .signup{
+    margin-top:20px;
+    font-size:14px;
+    }
+
+    .signup a{
+    color:#19c3d4;
+    text-decoration:none;
+    }
+
+    .image-section{
+    width:50%;
+    background:#11273a;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+    }
+
+    .image-section img{
+    width:400px;
+    margin-bottom:20px;
+    }
+
+    .tags span{
+    background:#1e3c52;
+    padding:6px 12px;
+    margin:5px;
+    border-radius:20px;
+    font-size:12px;
+    }
+
+    .logo{
+        animation: fadeLogo 3s infinite;
+    }
+    .description{
+        opacity: 0;
+        height: 0;
+    }
+
+    .description:hover {
+        cursor: pointer;
+        animation: fadeDescription 1s forwards;
+    }
+    @keyframes fadeDescription{
+        from { opacity: 0; }
+        to { opacity: 1; 
+        height: max-content;}
+    }
+
+    @keyframes fadeLogo{
+
+        0%{
+        opacity:1;
+        }
+
+        50%{
+        opacity:0.2;
+        }
+
+        100%{
+        opacity:1;
+        }
+
+    }
+    </style>
+    <body>
+
+    <div class="container">
+
+        <!-- Partie gauche -->
+        <div class="login-section">
+
+            <h2>
+                <i class="fa-solid fa-comments"></i> EduShield Chat
+            </h2>
+            <h3>Application de messagerie scolaire</h3>
+            <p class="description">EduShield Chat est une messagerie scolaire sécurisée qui protège les données, encadre les échanges entre élèves et enseignants, et garantit une communication officielle, fiable et adaptée au contexte éducatif camerounais.</p><br>
+
+            <form method="post" action="dashboard.html">
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" minlength="8">
+                </div>
+
+                <button type="submit">Sign in</button>
+
+                <div class="signup">
+                    Don't have an account? <a href="#">Sign up</a>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Partie droite -->
+        <div class="image-section">
+
+            <img src="assets/img/Logo EduShield Chat.png" class="logo" alt="Logo EduShield">
+
+            <h3>Connect Anytime, Anywhere</h3> <br>
+
+            <div class="tags">
+                <span>Secure</span>
+                <span>Fast</span>
+                <span>Reliable</span>
             </div>
-            <div>
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Se connecter</button>
-        </form>
-        <p>Pas de compte ? <a href="register.html">S'inscrire</a></p>
+
+        </div>
+
     </div>
-</body>
+
+    <script>
+        const description = document.querySelector('.description');
+    </script>
+    </body>
 </html>
