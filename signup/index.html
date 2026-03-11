@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Interface</title>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="icon" href="assets/img/Logo EduShield Chat.png">        
+        r<link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+
+    <div class="container">
+
+        <!-- Partie gauche -->
+        <div class="login-section">
+
+            <h2>
+                <i class="fa-solid fa-comments"></i> EduShield Chat
+            </h2>
+            <h3>Application de messagerie scolaire</h3>
+            <p class="description">EduShield Chat est une messagerie scolaire sécurisée qui protège les données, encadre les échanges entre élèves et enseignants, et garantit une communication officielle, fiable et adaptée au contexte éducatif camerounais.</p><br>
+
+            <form method="post" action="dashboard/index.html">
+
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" minlength="8">
+                </div>
+
+                <button type="submit">Sign in</button>
+
+                <div class="signup">
+                    Don't have an account? <a href="#">Sign up</a>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Partie droite -->
+        <div class="image-section">
+
+            <img src="assets/img/Logo EduShield Chat.png" class="logo" alt="Logo EduShield">
+
+            <h3>Connect Anytime, Anywhere</h3> <br>
+
+            <div class="tags">
+                <span>Secure</span>
+                <span>Fast</span>
+                <span>Reliable</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const description = document.querySelector('.description');
+    </script>
+    </body>
+</html>
